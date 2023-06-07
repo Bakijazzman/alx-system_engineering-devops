@@ -1,2 +1,2 @@
 #!/bin/bang
-mv [[uppercase]]* /tmp/u
+mv [[:upper:]]* /tmp/u
