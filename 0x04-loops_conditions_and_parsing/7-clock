@@ -3,7 +3,7 @@
 
 #i=1
 hours=0
-while ((hours<12));
+while ((hours<=12));
 do
 	i=1
 	echo "Hours: $hours"
