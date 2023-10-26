@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # nested loops in shell
 
-#i=1
+i=1
 hours=0
 while ((hours<=12));
 do
