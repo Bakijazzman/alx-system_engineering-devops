@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#easier bash pid print
+
+pgrep -l bash
