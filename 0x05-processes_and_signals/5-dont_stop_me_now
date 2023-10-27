@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#kill command
+
+for i in $(pgrep -f 4-to_infinity_and_beyond)
+do
+	kill -9 "$i"
+done
