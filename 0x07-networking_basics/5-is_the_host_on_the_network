@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#comment
 
 
 if [ "$#" -ne 1 ]
