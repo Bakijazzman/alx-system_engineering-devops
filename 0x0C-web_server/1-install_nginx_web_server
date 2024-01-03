@@ -2,5 +2,5 @@
 # a script that install nginx and change default html
 sudo apt-get update -y
 sudo apt-get install nginx -y
-echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
 service nginx restart
