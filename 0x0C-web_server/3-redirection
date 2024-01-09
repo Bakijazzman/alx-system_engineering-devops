@@ -2,7 +2,8 @@
 # a script that install nginx and change default html
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo -E echo "Hello World!" > /var/www/html/index.html
 REDIRECT="\\\n\tlocation /redirect_me {\n\t\treturn 301 https://github.com/Bakijazzman;\n\t}\n"
-sudo sed -i "53i $REDIRECT" /etc/nginx/sites-enabled/default
-sudo service nginx reload
+sudo sed -i "53i $REDIRECT" /etc/nginx/sites-available/default
+sudo nginx -t
+sudo service nginx restart
