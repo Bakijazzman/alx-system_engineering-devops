@@ -1,7 +1,7 @@
 # Task 2
 
 exec {'update_system':
-  command => '/usr/bin/apt-get -y update',
+  command => '/usr/bin/sudo apt-get -y update',
 }
 
 package { 'nginx':
@@ -19,9 +19,9 @@ file { '/var/www/html/index.html' :
 }
 
 file_line { 'Creating header':
-  	ensure => present,
-  	path   => '/etc/nginx/sites-available/default',
-  	line   => "\tadd_header X-Served-By ${hostname};",
-  	after  => 'server_name _;',
-	require => Service['nginx'],
+  ensure  => present,
+  path    => '/etc/nginx/sites-enabled/default',
+  line    => "\tadd_header X-Served-By ${hostname};",
+  after   => 'server_name _;',
+  require => Service['nginx'],
 }
