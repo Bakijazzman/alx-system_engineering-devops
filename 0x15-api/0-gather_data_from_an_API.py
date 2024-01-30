@@ -18,7 +18,7 @@ if __name__ == "__main__":
     for task in response.json():
         if task.get('completed') is True:
             tasks.append(task)
-    
+
     print(f"({len(tasks)}/{len(response.json())})")
     for task in tasks:
         print(f'\t {task.get("title")}')
