@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Import Modules Here 
+Import Modules Here
 """
 import requests
 from sys import argv
@@ -21,6 +21,6 @@ if __name__ == "__main__":
         if task.get('completed') is True:
             tasks.append(task)
 
-    print(f"({len(tasks)}/{len(response.json())})")
+    print(f"({len(tasks)}/{len(response.json())}):")
     for task in tasks:
         print(f'\t {task.get("title")}')
